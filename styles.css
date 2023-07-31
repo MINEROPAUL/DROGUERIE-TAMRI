@@ -1,0 +1,142 @@
+/* Réinitialisation des styles par défaut */
+
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styles de la barre de navigation */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f2f2f2;
+}
+
+/* Styles du contenu */
+main {
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Styles pour le carrousel d'images */
+.image-slider {
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  animation: slide 15s infinite linear; /* Animation de défilement */
+  margin-bottom: 20px; /* Espacement entre le carrousel et le contenu suivant */
+}
+
+.slider-container img {
+  width: 100%;
+  max-height: 400px; /* Ajuster la hauteur selon vos besoins */
+  object-fit: cover;
+}
+
+.slider-container img:not(:last-child) {
+  margin-right: 20px; /* Espacement horizontal entre les images */
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); } /* Faire défiler vers la gauche */
+}
+
+/* Styles du pied de page */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Styles pour les cartes d'identité */
+.profile-card {
+  text-align: center;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.profile-card:hover {
+  transform: rotateY(5deg);
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.rounded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
